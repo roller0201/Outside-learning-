@@ -101,3 +101,13 @@ main button:hover {
   background: #000;
   color: #fff;
 }
+
+body.dark main button,
+body.dark {
+  background-color: #0000;
+  color: #fff;
+}
+body.dark main button:hover {
+  background-color: #fff;
+  color: #000;
+}
