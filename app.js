@@ -1,5 +1,6 @@
-const switchButton = document.getElementById("#switch");
+const switchButton = document.querySelector("header button");
 
-switchButton.addEventListener("click", function () {
-  document.querySelector("body").style.backgroundColor = black;
+switchButton.addEventListener("click", () => {
+  document.querySelector("body").style.backgroundColor = "#000";
+  document.querySelector("body").style.backgroundColor = "white";
 });
