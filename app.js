@@ -1,9 +1,24 @@
 const switchButton = document.querySelector("header button");
-const bodyStyle = document.querySelector("body");
+let theme = localStorage.getItem("theme");
 
 switchButton.addEventListener("click", () => {
-  if (bodyStyle.style.backgroundColor === "#fff")
-    document.querySelector("body").style.backgroundColor = "#000";
-  else if (bodyStyle.style.backgroundColor === "#000")
-    document.querySelector("body").style.backgroundColor = "#fff";
+  if (theme === "dark") {
+    document.querySelector("body").classList.remove("dark");
+    document.querySelector("body").classList.add("light");
+    theme = "light";
+  } else {
+    document.querySelector("body").classList.remove("light");
+    document.querySelector("body").classList.add("dark");
+    theme = "dark";
+  }
+
+  localStorage.setItem("theme", theme);
 });
+
+if (theme === "dark") {
+  document.querySelector("body").classList.add("dark");
+}
+
+if (theme === "light") {
+  document.querySelector("body").classList.add("light");
+}
